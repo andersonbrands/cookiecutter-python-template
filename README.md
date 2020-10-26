@@ -7,3 +7,5 @@ Get to know cookiecutter: https://cookiecutter.readthedocs.io/
 ```
 cookiecutter gh:andersonbrands/cookiecutter-python-template
 ```
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
