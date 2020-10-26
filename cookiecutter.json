@@ -1,0 +1,8 @@
+{
+    "repo_name": "repo-name",
+    "package_name": "packagename",
+    "program_name": "program name",
+    "program_name_cli": "program-name-cli",
+    "author": "author",
+    "author_email": "author_email"
+}
