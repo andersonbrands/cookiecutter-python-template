@@ -2,7 +2,7 @@ import logging
 import sys
 from typing import List
 
-from {{cookiecutter.package_name}} import logger, R
+from {{cookiecutter.package_name}} import logger, R, logger_handler
 from {{cookiecutter.package_name}}.cli import cli
 
 
@@ -22,8 +22,8 @@ def _create_file_handler() -> logging.FileHandler:
 
 
 def main(params: List[str] = None):
-    logger.addHandler(_create_file_handler())
-    cli(params)
+    with logger_handler(logger, _create_file_handler()):
+        cli(params)
     pass
 
 

@@ -91,6 +91,7 @@ def test_cli_logger_name_matches_package_name():
     assert logger.name == R.string.package_name
 
 
-def test_cli_adds_console_handler_to_logger():
-    cli()
-    assert logging.StreamHandler in map(type, logger.handlers)
+def test_cli_uses_logger_handler():
+    with mock.patch('{{cookiecutter.package_name}}.cli.logger_handler') as logger_handler_:
+        cli()
+        logger_handler_.assert_called_once()
